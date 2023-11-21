@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //importing
-SceneManagement library
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,12 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb; //create reference for rigidbody bc jump requires physics
     public float jumpForce; //the force that will be added to the vertical component of player's velocity
     public float speed;
-    public bool hasKey = false;
-
-    public GameObject key;
-
-    public static PlayerController instance; //creating an object of the class to be findable 
-
+    
     //Ground Check Variables
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -28,16 +22,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-    }
-
-    {
-        if(instance != null) //check if instance is in the scene
-        {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-        GameObject.DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -65,6 +49,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+
 
         transform.position = newPosition;
         transform.localScale = newScale;
