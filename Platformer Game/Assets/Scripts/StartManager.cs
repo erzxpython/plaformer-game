@@ -18,6 +18,11 @@ public class StartManager : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+
+        if (Input.GetKey(KeyCode.N))
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 }
 
