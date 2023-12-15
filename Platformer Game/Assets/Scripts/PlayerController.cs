@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb; //create reference for rigidbody bc jump requires physics
     public float jumpForce; //the force that will be added to the vertical component of player's velocity
     public float speed;
-    public bool hasDiamond = false;
-    public bool hasDiamondTwo = false;
+    public bool hasCoinOne = false;
+    public bool hasCoinTwo = false;
 
-    public GameObject diamond;
-    public GameObject diamondtwo;
+    public GameObject coinone;
+    public GameObject cointwo;
 
     //Ground Check Variables
     public LayerMask groundLayer;
@@ -69,18 +69,23 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
         }
 
-        if (collision.gameObject.tag.Equals("diamond"))
+        if(collision.gameObject.tag.Equals("gate"))
         {
-            Debug.Log("obtained diamond");
-            diamond.SetActive(false);//diamond disappears
-            hasDiamond = true;//the diamond now
+            Debug.Log("hit");
+            SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
+        }
+        if(collision.gameObject.tag.Equals("coinone"))
+        {
+            Debug.Log("obtained coinone");
+            coinone.SetActive(false);//coinone disappears
+            hasCoinOne = true;//the coinone now
         }
 
-        if(collision.gameObject.tag.Equals("diamondtwo"))
+        if(collision.gameObject.tag.Equals("cointwo"))
         {
-            Debug.Log("obtained diamondtwo");
-            diamondtwo.SetActive(false);//diamondtwo disappears
-            hasDiamondTwo = true;//the diamondtwo now
+            Debug.Log("obtained cointwo");
+            cointwo.SetActive(false);//cointwo disappears
+            hasCoinTwo = true;//the coinone now
         }
     }
 
