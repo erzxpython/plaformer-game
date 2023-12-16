@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 831436028}
   m_Layer: 0
   m_Name: GuardPlatform
-  m_TagString: Untagged
+  m_TagString: guardplatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -768,6 +768,7 @@ GameObject:
   - component: {fileID: 1269601537}
   - component: {fileID: 1269601536}
   - component: {fileID: 1269601535}
+  - component: {fileID: 1269601538}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -868,6 +869,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269601538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269601534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dea6f2b1ac5f475c99846396c5cd3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1280779496
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +892,7 @@ GameObject:
   - component: {fileID: 1280779499}
   - component: {fileID: 1280779498}
   - component: {fileID: 1280779497}
+  - component: {fileID: 1280779500}
   m_Layer: 0
   m_Name: PlatformTwo
   m_TagString: Untagged
@@ -979,6 +993,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1280779500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280779496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dea6f2b1ac5f475c99846396c5cd3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1283348098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,8 +1083,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283348098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.45, y: 6.45, z: -1.3467164}
-  m_LocalScale: {x: 1.3718, y: 1.2591, z: 1}
+  m_LocalPosition: {x: 2.59, y: 1.4269, z: -1.3467164}
+  m_LocalScale: {x: 1.1613659, y: 1.065954, z: 0.8466}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
