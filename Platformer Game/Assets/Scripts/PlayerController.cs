@@ -66,13 +66,19 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("portal"))
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
+            SceneManager.LoadScene(3); //access SceneManager class for LoadScene function
         }
 
         if(collision.gameObject.tag.Equals("gate"))
         {
             Debug.Log("hit");
             SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
+        }
+
+        if(collision.gameObject.tag.Equals("guardplatform"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(5); //access SceneManager class for LoadScene function
         }
         if(collision.gameObject.tag.Equals("coinone"))
         {

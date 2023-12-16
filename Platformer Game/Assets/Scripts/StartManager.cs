@@ -21,7 +21,12 @@ public class StartManager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.N))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
+        }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(5);
         }
     }
 }
